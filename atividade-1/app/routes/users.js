@@ -18,14 +18,14 @@ module.exports = (app) => {
   // ENDPOINT POSTS
 
   // POST - Inserir Posts
-  app.post("/posts");
+  app.post("/posts", controller.inserirPosts);
 
   // GET - Listar Posts
-  app.get("/posts");
+  app.get("/posts", controller.listarPosts);
 
   // GET - Retorna Post com um dado ID
-  app.get("/posts/:id");
+  app.get("/posts/:id", controller.buscarPostById);
 
   // DELETE - Remove Post
-  app.delete("/posts/:id");
+  app.delete("/posts/:id", controller.deletarPostById);
 };
